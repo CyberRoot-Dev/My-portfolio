@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CyberRoot-Dev | Portfolio</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body{
+  background: radial-gradient(circle at top, #0b1b3a, #020617);
+  color:#e5e7eb;
+}
+
+/* ---------- GENERAL ---------- */
+section{
+  max-width:900px;
+  margin:auto;
+  padding:70px 20px;
+  text-align:center;
+}
+
+/* ---------- SECTION HEADINGS ---------- */
+h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  
+  background: linear-gradient(90deg, #22c55e, #38bdf8, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  
+  letter-spacing: 0.5px;
+}
+
+p{
+  color:#cbd5f5;
+  line-height:1.6;
+}
+
+/* ---------- HEADER ---------- */
+.site-brand{
+  display:inline-block;
+  margin:22px;
+  padding:0;  
+
+  font-size:1.6rem;
+  font-weight:800;
+  letter-spacing:1.4px;
+
+  color:#e5e7eb;
+}
+
+/* Dev part accent */
+.site-brand span{
+  color:#38bdf8;
+  font-weight:900;
+}
+
+.cursor{
+  color:#22c55e;
+  font-weight:900;
+  animation:blink 1.1s infinite;
+}
+
+@keyframes blink{
+  0%,50%{opacity:1;}
+  51%,100%{opacity:0;}
+}
+/* ---------- HERO ---------- */
+.hero{
+  text-align:center;
+  padding:40px 20px 60px;
+}
+
+.avatar{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  overflow:hidden;
+  border:4px solid #22c55e;
+  margin:0 auto 20px;
+}
+
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.hero h1{
+  font-size:2rem;
+  margin-bottom:10px;
+}
+
+.hero p{
+  max-width:600px;
+  margin:auto;
+  opacity:0.9;
+}
+
+.buttons{
+  margin-top:25px;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+}
+
+.btn{
+  padding:12px 22px;
+  border-radius:30px;
+  font-weight:600;
+  border:none;
+  cursor:pointer;
+}
+
+.primary{
+  background:#22c55e;
+  color:#020617;
+}
+
+.secondary{
+  background:#0f172a;
+  color:#e5e7eb;
+  border:1px solid #1e293b;
+}
+
+/* ---------- ABOUT ---------- */
+.about{
+  max-width:750px;
+}
+
+/* ---------- STATS ---------- */
+.stats{
+  display:grid;
+  gap:20px;
+  margin-top:40px;
+}
+
+.stat-card{
+  background:rgba(255,255,255,0.05);
+  border-radius:24px;
+  padding:26px;
+}
+
+.stat-card h3{
+  font-size:1.4rem;
+}
+
+.stat-card span{
+  color:#94a3b8;
+}
+
+/* ---------- SKILLS ---------- */
+.skill-box{
+  background:rgba(255,255,255,0.05);
+  border-radius:24px;
+  padding:26px;
+  margin-bottom:30px;
+}
+
+.skill{
+  margin:15px 0;
+}
+
+.skill-name{
+  margin-bottom:6px;
+}
+
+.bar{
+  width:100%;
+  height:10px;
+  background:#020617;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.fill{
+  height:100%;
+  background: linear-gradient(90deg,#38bdf8,#a78bfa);
+}
+
+/* ---------- PROJECTS ---------- */
+.projects{
+  display:grid;
+  gap:30px;
+  margin-top:30px;
+}
+
+.project-card{
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.03)
+  );
+  border-radius:28px;
+  padding:30px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+.project-preview{
+  height:160px;
+  border-radius:20px;
+  background:radial-gradient(circle at top, #1e3a8a, #020617);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:2rem;
+  margin-bottom:25px;
+}
+/* ---------- TOOLS (INSPIRED & UNIQUE) ---------- */
+.tools-box {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 26px;
+  padding: 40px 20px;
+}
+
+.tools {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.tool {
+  padding: 14px 26px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #22c55e, #38bdf8, #a78bfa);
+  color: #020617;
+  font-weight: 600;
+}
+/* ---------- CONTACT ---------- */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.socials a {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  transition: 0.3s;
+}
+
+.socials img {
+  width: 28px;
+  filter: invert(1);
+}
+
+.socials a:hover {
+  transform: scale(1.2);
+  background: linear-gradient(135deg, #22c55e, #ff5ca2);
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+  text-align:center;
+  padding:40px 20px;
+  font-size:0.85rem;
+  color:#94a3b8;
+}
+/* ----------  HERO NAME ---------- */
+.intro {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  opacity: 0.9;
+  color: #e5e7eb;
+}
+
+.name {
+  font-size: 3.2rem;
+  font-weight: 800;
+  background: linear-gradient(
+    90deg,
+    #22c55e,
+    #38bdf8,
+    #a78bfa
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 4s linear infinite;
+  text-shadow: 0 0 25px rgba(56,189,248,0.35);
+  margin-bottom: 20px;
+}
+
+/* gradient animation */
+@keyframes gradientMove {
+  to {
+    background-position: 200% center;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="site-brand">
+  CyberRoot<span>-Dev</span><b class="cursor">_</b>
+</div>
+
+<div class="hero">
+  <div class="avatar">
+    <img src="./image/profile.jpg" alt="Hema Gupta">
+  </div>
+
+  <div class="intro">Hi, I'm</div>
+<div class="name">Hema Gupta</div>
+
+  <p>
+    Class 12 student learning web development with strong fundamentals,
+    real practice, and consistency — currently coding using a mobile device.
+  </p>
+
+  <div class="buttons">
+    <button class="btn primary">View Projects</button>
+    <a href="https://github.com/CyberRoot-Dev" target="_blank">
+      <button class="btn secondary">GitHub</button>
+    </a>
+  </div>
+</div>
+
+<section class="about">
+  <h2>About</h2>
+  <p>
+    I focus on understanding how code works instead of copying it.
+    Currently comfortable with HTML, CSS, JavaScript, and Python basics.
+    Slowly improving logic, structure, and clean coding practices.
+  </p>
+
+  <div class="stats">
+    <div class="stat-card">
+      <h3>Consistent</h3>
+      <span>Daily coding habit</span>
+    </div>
+
+    <div class="stat-card">
+      <h3>1+</h3>
+      <span>Completed project</span>
+    </div>
+
+    <div class="stat-card">
+      <h3>20+</h3>
+      <span>Practice problems</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Skills</h2>
+
+  <div class="skill-box">
+    <h3>Frontend</h3>
+
+    <div class="skill">
+      <div class="skill-name">HTML</div>
+      <div class="bar"><div class="fill" style="width:60%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">CSS</div>
+      <div class="bar"><div class="fill" style="width:50%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">JavaScript</div>
+      <div class="bar"><div class="fill" style="width:20%"></div></div>
+    </div>
+  </div>
+
+  <div class="skill-box">
+    <h3>Programming</h3>
+
+    <div class="skill">
+      <div class="skill-name">Python</div>
+      <div class="bar"><div class="fill" style="width:25%"></div></div>
+    </div>
+
+    <p style="margin-top:10px;color:#94a3b8;">
+      Backend fundamentals currently under learning phase.
+    </p>
+  </div>
+</section>
+
+<section>
+  
+  <h2>Projects</h2>
+
+  <div class="projects">
+    <div class="project-card">
+      <div class="project-preview">Habit Tracker</div>
+      <h3>Habit Tracker</h3>
+      <p>
+        A simple habit tracking website built using HTML, CSS,
+        and JavaScript to practice logic.
+      </p>
+    </div>
+
+    <div class="project-card">
+      <div class="project-preview">Portfolio</div>
+      <h3>Portfolio Website</h3>
+      <p>
+        Personal portfolio showcasing my frontend learning,
+        projects, and consistency — built fully on mobile.
+      </p>
+    </div>
+  </div>
+</section>
+<section>
+  <h2>Tools I Use</h2>
+
+  <div class="tools-box">
+    <div class="tools">
+      <div class="tool">SPCK Editor</div>
+      <div class="tool">GitHub</div>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact">
+  <h3 style="text-align:center; color:#ff5ca2;">Connect With Me</h3>
+  
+  <div class="socials">
+    
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/hema-gupta8j" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+    </a>
+    
+    <!-- Email -->
+    <a href="mailto:h23663430@gmail.com">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email">
+    </a>
+    
+    <!-- GitHub -->
+    <a href="https://github.com/CyberRoot-Dev" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub">
+    </a>
+    
+  </div>
+</section>
+
+<footer>
+  Built using a mobile device.📱 Laptop coming soon.💻<br>
+  © 2026 CuberRoot-Dev 
+</footer>
+
+</body>
+</html>
